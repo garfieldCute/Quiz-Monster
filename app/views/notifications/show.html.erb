@@ -1,0 +1,18 @@
+<p>
+  <b>Date:</b>
+  <%=h @notification.date %>
+</p>
+
+<p>
+  <b>Section:</b>
+  <%=h @notification.section %>
+</p>
+
+<p>
+  <b>Quiz:</b>
+  <%=h @notification.quiz %>
+</p>
+
+
+<%= link_to 'Edit', edit_notification_path(@notification) %> |
+<%= link_to 'Back', notifications_path %>

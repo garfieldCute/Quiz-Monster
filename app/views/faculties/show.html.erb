@@ -1,0 +1,23 @@
+<p>
+  <b>Username:</b>
+  <%=h @faculty.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @faculty.password %>
+</p>
+
+<p>
+  <b>Firstname:</b>
+  <%=h @faculty.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%=h @faculty.lastname %>
+</p>
+
+
+<%= link_to 'Edit', edit_faculty_path(@faculty) %> |
+<%= link_to 'Back', faculties_path %>

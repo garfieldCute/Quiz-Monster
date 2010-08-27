@@ -1,0 +1,13 @@
+<p>
+  <b>Question:</b>
+  <%=h @student_answer.question %>
+</p>
+
+<p>
+  <b>Answer:</b>
+  <%=h @student_answer.answer %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_answer_path(@student_answer) %> |
+<%= link_to 'Back', student_answers_path %>

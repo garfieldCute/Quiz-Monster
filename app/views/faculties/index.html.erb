@@ -1,0 +1,26 @@
+<h1>Listing faculties</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+
+<% @faculties.each do |faculty| %>
+  <tr>
+    <td><%=h faculty.username %></td>
+    <td><%=h faculty.password %></td>
+    <td><%=h faculty.firstname %></td>
+    <td><%=h faculty.lastname %></td>
+    <td><%= link_to 'Show', faculty %></td>
+    <td><%= link_to 'Edit', edit_faculty_path(faculty) %></td>
+    <td><%= link_to 'Destroy', faculty, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New faculty', new_faculty_path %>

@@ -685,3 +685,1108 @@ Migrating to CreateSections (20100826063017)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
   [4;35;1mSQL (0.0ms)[0m   [0mdescribe `students`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE `join_sections` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `students_id` varchar(255), `sections_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827023115')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCREATE TABLE `quizzes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `quizType` varchar(255), `faculties_id` varchar(255), `sections_id` varchar(255), `timer` varchar(255), `startDate` varchar(255), `endDate` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827025045')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (234.4ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `students`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `correct` varchar(255), `rate` varchar(255), `quizzes_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827025606')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+  [4;36;1mSQL (140.6ms)[0m   [0;1mCREATE TABLE `choices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `questions_id` varchar(255), `choice` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827025759')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+  [4;36;1mSQL (62.5ms)[0m   [0;1mCREATE TABLE `student_quizzes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `quizzes_id` varchar(255), `time` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827030019')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCREATE TABLE `student_answers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `questions_id` varchar(255), `answer` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827030233')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `courses`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `join_sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_answers`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `students`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE `admins` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `admin_username` varchar(255), `admin_password` varchar(255), `admin_firstname` varchar(255), `admin_lastname` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827030405')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE `notifications` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `date` varchar(255), `section` varchar(255), `quizzes_id` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827030659')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `student_answers`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `student_answers`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_answers`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_quizzes`[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mSHOW FIELDS FROM `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+Migrating to CreateResearches (20100827033632)
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCREATE TABLE `researches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `firstname` varchar(255), `lastname` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827033632')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+Migrating to CreateResearches (20100827033632)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+Migrating to CreateResearches (20100827033632)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+Migrating to CreateResearches (20100827033632)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+Migrating to CreateResearches (20100827033632)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+Migrating to CreateResearches (20100827033632)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+Migrating to CreateResearches (20100827033632)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+Migrating to CreateResearches (20100827033632)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20100824062513)
+Migrating to CreateFaculties (20100824062753)
+Migrating to CreateCourses (20100824062906)
+Migrating to CreateSections (20100826063017)
+Migrating to CreateJoinSections (20100827023115)
+Migrating to CreateQuizzes (20100827025045)
+Migrating to CreateQuestions (20100827025606)
+Migrating to CreateChoices (20100827025759)
+Migrating to CreateStudentQuizzes (20100827030019)
+Migrating to CreateStudentAnswers (20100827030233)
+Migrating to CreateAdmins (20100827030405)
+Migrating to CreateNotifications (20100827030659)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `choices`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `courses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `courses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `faculties`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `faculties`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `faculties`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `join_sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `join_sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `notifications`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `notifications`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `researches`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `researches`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `researches`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `student_answers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `student_answers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `student_quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW KEYS FROM `student_quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `students`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `students`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `students`[0m

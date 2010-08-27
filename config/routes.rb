@@ -1,4 +1,30 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :notifications
+
+  map.resources :student_answers
+
+  map.resources :student_quizzes
+
+  map.resources :quizzes
+
+  map.resources :join_sections
+
+  map.resources :admins
+
+  map.resources :choices
+
+  map.resources :questions
+
+  map.resources :sections
+
+  map.resources :faculties
+
+  map.resources :courses
+
+  map.resources :researches
+
+  map.resources :students
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

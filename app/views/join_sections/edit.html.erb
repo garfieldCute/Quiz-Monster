@@ -1,0 +1,20 @@
+<h1>Editing join_section</h1>
+
+<% form_for(@join_section) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :section %><br />
+    <%= f.text_field :section %>
+  </p>
+  <p>
+    <%= f.label :student %><br />
+    <%= f.text_field :student %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @join_section %> |
+<%= link_to 'Back', join_sections_path %>

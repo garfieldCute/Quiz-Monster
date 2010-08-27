@@ -9,7 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100826063017) do
+ActiveRecord::Schema.define(:version => 20100827033632) do
+
+  create_table "admins", :force => true do |t|
+    t.string   "admin_username"
+    t.string   "admin_password"
+    t.string   "admin_firstname"
+    t.string   "admin_lastname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "choices", :force => true do |t|
+    t.string   "questions_id"
+    t.string   "choice"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "courses", :force => true do |t|
     t.string   "courseCode"
@@ -28,9 +44,67 @@ ActiveRecord::Schema.define(:version => 20100826063017) do
     t.datetime "updated_at"
   end
 
+  create_table "join_sections", :force => true do |t|
+    t.string   "students_id"
+    t.string   "sections_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", :force => true do |t|
+    t.string   "date"
+    t.string   "section"
+    t.string   "quizzes_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "question"
+    t.string   "correct"
+    t.string   "rate"
+    t.string   "quizzes_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "quizzes", :force => true do |t|
+    t.string   "quizType"
+    t.string   "faculties_id"
+    t.string   "sections_id"
+    t.string   "timer"
+    t.string   "startDate"
+    t.string   "endDate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "researches", :force => true do |t|
+    t.string   "username"
+    t.string   "password"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sections", :force => true do |t|
     t.string   "section"
     t.string   "courses_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "student_answers", :force => true do |t|
+    t.string   "questions_id"
+    t.string   "answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "student_quizzes", :force => true do |t|
+    t.string   "quizzes_id"
+    t.string   "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

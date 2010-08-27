@@ -1,0 +1,35 @@
+<h1>New quiz</h1>
+
+<% form_for(@quiz) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :faculty %><br />
+    <%= f.text_field :faculty %>
+  </p>
+  <p>
+    <%= f.label :section %><br />
+    <%= f.text_field :section %>
+  </p>
+  <p>
+    <%= f.label :timer %><br />
+    <%= f.text_field :timer %>
+  </p>
+  <p>
+    <%= f.label :startdate %><br />
+    <%= f.text_field :startdate %>
+  </p>
+  <p>
+    <%= f.label :enddate %><br />
+    <%= f.text_field :enddate %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', quizzes_path %>

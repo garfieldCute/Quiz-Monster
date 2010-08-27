@@ -1,0 +1,26 @@
+<h1>Listing choices</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Choicea</th>
+    <th>Choiceb</th>
+    <th>Choicec</th>
+  </tr>
+
+<% @choices.each do |choice| %>
+  <tr>
+    <td><%=h choice.question %></td>
+    <td><%=h choice.choiceA %></td>
+    <td><%=h choice.choiceB %></td>
+    <td><%=h choice.choiceC %></td>
+    <td><%= link_to 'Show', choice %></td>
+    <td><%= link_to 'Edit', edit_choice_path(choice) %></td>
+    <td><%= link_to 'Destroy', choice, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New choice', new_choice_path %>

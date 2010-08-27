@@ -1,0 +1,13 @@
+<p>
+  <b>Quiz:</b>
+  <%=h @student_quiz.quiz %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @student_quiz.time %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_quiz_path(@student_quiz) %> |
+<%= link_to 'Back', student_quizzes_path %>

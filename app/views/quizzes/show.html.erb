@@ -1,0 +1,33 @@
+<p>
+  <b>Type:</b>
+  <%=h @quiz.type %>
+</p>
+
+<p>
+  <b>Faculty:</b>
+  <%=h @quiz.faculty %>
+</p>
+
+<p>
+  <b>Section:</b>
+  <%=h @quiz.section %>
+</p>
+
+<p>
+  <b>Timer:</b>
+  <%=h @quiz.timer %>
+</p>
+
+<p>
+  <b>Startdate:</b>
+  <%=h @quiz.startdate %>
+</p>
+
+<p>
+  <b>Enddate:</b>
+  <%=h @quiz.enddate %>
+</p>
+
+
+<%= link_to 'Edit', edit_quiz_path(@quiz) %> |
+<%= link_to 'Back', quizzes_path %>

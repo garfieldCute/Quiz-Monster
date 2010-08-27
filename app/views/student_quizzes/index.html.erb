@@ -1,0 +1,22 @@
+<h1>Listing student_quizzes</h1>
+
+<table>
+  <tr>
+    <th>Quiz</th>
+    <th>Time</th>
+  </tr>
+
+<% @student_quizzes.each do |student_quiz| %>
+  <tr>
+    <td><%=h student_quiz.quiz %></td>
+    <td><%=h student_quiz.time %></td>
+    <td><%= link_to 'Show', student_quiz %></td>
+    <td><%= link_to 'Edit', edit_student_quiz_path(student_quiz) %></td>
+    <td><%= link_to 'Destroy', student_quiz, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New student_quiz', new_student_quiz_path %>

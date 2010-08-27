@@ -1,0 +1,22 @@
+<h1>Listing join_sections</h1>
+
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Student</th>
+  </tr>
+
+<% @join_sections.each do |join_section| %>
+  <tr>
+    <td><%=h join_section.section %></td>
+    <td><%=h join_section.student %></td>
+    <td><%= link_to 'Show', join_section %></td>
+    <td><%= link_to 'Edit', edit_join_section_path(join_section) %></td>
+    <td><%= link_to 'Destroy', join_section, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New join_section', new_join_section_path %>
