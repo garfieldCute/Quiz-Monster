@@ -1,4 +1,14 @@
-<h1>Listing questions</h1>
+<div>
+  <td><%=image_tag "quiz.png", :height => 110, :width => 180 %></td>
+</div>
+<table border=1 bordercolor=" #D462FF">
+  <tr>
+    <td><h3>Listing questions</h3></td>
+  </tr>
+  <tr>
+    
+  </tr>
+</table>
 
 <table>
   <tr>
@@ -10,7 +20,7 @@
 <% @questions.each do |question| %>
   <tr>
     <td><%=h question.question %></td>
-    <td><%=h question.correctanswer %></td>
+    <td><%=h question.correct %></td>
     <td><%=h question.rate %></td>
     <td><%= link_to 'Show', question %></td>
     <td><%= link_to 'Edit', edit_question_path(question) %></td>
