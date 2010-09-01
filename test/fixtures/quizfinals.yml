@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  quiztype: MyString
+  faculty: MyString
+  section: MyString
+  timer: MyString
+  startdate: MyString
+  enddate: MyString
+
+two:
+  quiztype: MyString
+  faculty: MyString
+  section: MyString
+  timer: MyString
+  startdate: MyString
+  enddate: MyString

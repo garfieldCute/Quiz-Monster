@@ -1,0 +1,38 @@
+<p>
+  <b>Question:</b>
+  <%=h @multiplechoice.question %>
+</p>
+
+<p>
+  <b>Choice1:</b>
+  <%=h @multiplechoice.choice1 %>
+</p>
+
+<p>
+  <b>Choice2:</b>
+  <%=h @multiplechoice.choice2 %>
+</p>
+
+<p>
+  <b>Choice3:</b>
+  <%=h @multiplechoice.choice3 %>
+</p>
+
+<p>
+  <b>Choice4:</b>
+  <%=h @multiplechoice.choice4 %>
+</p>
+
+<p>
+  <b>Correctchoice:</b>
+  <%=h @multiplechoice.correctChoice %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%=h @multiplechoice.rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_multiplechoice_path(@multiplechoice) %> |
+<%= link_to 'Back', multiplechoices_path %>

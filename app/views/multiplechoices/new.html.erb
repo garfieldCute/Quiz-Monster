@@ -1,0 +1,39 @@
+<h1>New multiplechoice</h1>
+
+<% form_for(@multiplechoice) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :question %><br />
+    <%= f.text_area :question %>
+  </p>
+  <p>
+    <%= f.label :choice1 %><br />
+    <%= f.text_area :choice1 %>
+  </p>
+  <p>
+    <%= f.label :choice2 %><br />
+    <%= f.text_area :choice2 %>
+  </p>
+  <p>
+    <%= f.label :choice3 %><br />
+    <%= f.text_area :choice3 %>
+  </p>
+  <p>
+    <%= f.label :choice4 %><br />
+    <%= f.text_area :choice4 %>
+  </p>
+  <p>
+    <%= f.label :correctChoice %><br />
+    <%= f.text_field :correctChoice %>
+  </p>
+  <p>
+    <%= f.label :rate %><br />
+    <%= f.text_area :rate %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', multiplechoices_path %>

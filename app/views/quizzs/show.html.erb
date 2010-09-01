@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @quizz.name %>
+</p>
+
+<p>
+  <b>Course:</b>
+  <%=h @quizz.course %>
+</p>
+
+<p>
+  <b>Section:</b>
+  <%=h @quizz.section %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @quizz.time %>
+</p>
+
+
+<%= link_to 'Edit', edit_quizz_path(@quizz) %> |
+<%= link_to 'Back', quizzs_path %>

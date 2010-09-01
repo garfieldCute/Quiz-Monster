@@ -1,0 +1,11 @@
+<%flash[:login]%>
+<% form_tag :action=>"authenticate" do%>
+<%=label_tag "Username"%>
+<%=text_field_tag "username", "User name"%><br>
+<%=label_tag "Password\"%>
+<%=password_field_tag "password", "Password"%><br>
+
+
+<%submit_tag "Login"%>
+
+<%end%>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  question: MyText
+  ans1: MyText
+  ans2: MyText
+  ans3: MyText
+  ans4: MyText
+  rate: MyString
+
+two:
+  question: MyText
+  ans1: MyText
+  ans2: MyText
+  ans3: MyText
+  ans4: MyText
+  rate: MyString

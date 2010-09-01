@@ -1,0 +1,63 @@
+<div align="center">
+  <td><%=image_tag "quiz.png", :height => 110, :width => 180 %></td>
+</div>
+<table border=0 style="border: 2px ridge #000099;" bgcolor="#ccccff" align="center">
+  <tr>
+    <td>
+      <table border=0>
+        <tr>
+          <td colspan=19 align="center"><h3><font color="red">CREATED QUIZZES</font></h3></td>
+        </tr>
+        <tr>
+          <td colspan=19>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><b>#</b></td>
+          <td>&nbsp;</td>
+          <td><b>TYPE</b></td>
+          <td>&nbsp;</td>
+          <td><b>TYPE</b></td>
+          <td>&nbsp;</td>
+          <td><b>Section</b></td>
+          <td>&nbsp;</td>
+          <td><b>Timer</b></td>
+          <td>&nbsp;</td>
+          <td><b>Start Date</b></td>
+          <td>&nbsp;</td>
+          <td><b>End Date</b></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <% @quizfinals.each do |quizfinal| %>
+        <tr>
+          <td><%=h quizfinal.id %></td>
+          <td>&nbsp;</td>
+          <td><%=h quizfinal.quiztype %></td>
+          <td>&nbsp;</td>
+          <td><%=h quizfinal.faculty %></td>
+          <td>&nbsp;</td>
+          <td align="center"><%=h quizfinal.section %></td>
+          <td>&nbsp;</td>
+          <td align="center"><%=h quizfinal.timer %></td>
+          <td>&nbsp;</td>
+          <td><%=h quizfinal.startdate %></td>
+          <td>&nbsp;</td>
+          <td><%=h quizfinal.enddate %></td>
+          <td>&nbsp;</td>
+          <td><%= link_to image_tag("show.png", :border=>0, :height => 20, :width => 20), quizfinal %></td>
+          <td>&nbsp;</td>
+          <td><%= link_to image_tag("edit.png", :border=>0, :height => 20, :width => 20), edit_quizfinal_path(quizfinal) %></td>
+          <td>&nbsp;</td>
+          <td><%= link_to image_tag("delete.png", :border=>0, :height => 20, :width => 20), quizfinal, :confirm => 'Are you sure?', :method => :delete %></td>
+        </tr>
+        <% end %>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td colspan=19><%= link_to image_tag("new.png", :border=>0, :height => 50, :width => 40), new_quizfinal_path %></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>

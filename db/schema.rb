@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100827033632) do
+ActiveRecord::Schema.define(:version => 20100901081244) do
 
   create_table "admins", :force => true do |t|
     t.string   "admin_username"
@@ -51,6 +51,18 @@ ActiveRecord::Schema.define(:version => 20100827033632) do
     t.datetime "updated_at"
   end
 
+  create_table "multiplechoices", :force => true do |t|
+    t.text     "question"
+    t.text     "choice1"
+    t.text     "choice2"
+    t.text     "choice3"
+    t.text     "choice4"
+    t.integer  "correctChoice"
+    t.text     "rate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "notifications", :force => true do |t|
     t.string   "date"
     t.string   "section"
@@ -68,6 +80,17 @@ ActiveRecord::Schema.define(:version => 20100827033632) do
     t.datetime "updated_at"
   end
 
+  create_table "quizfinals", :force => true do |t|
+    t.string   "quiztype"
+    t.string   "faculty"
+    t.string   "section"
+    t.string   "timer"
+    t.string   "startdate"
+    t.string   "enddate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "quizzes", :force => true do |t|
     t.string   "quizType"
     t.string   "faculties_id"
@@ -79,11 +102,11 @@ ActiveRecord::Schema.define(:version => 20100827033632) do
     t.datetime "updated_at"
   end
 
-  create_table "researches", :force => true do |t|
-    t.string   "username"
-    t.string   "password"
-    t.string   "firstname"
-    t.string   "lastname"
+  create_table "quizzs", :force => true do |t|
+    t.string   "name"
+    t.string   "course"
+    t.string   "section"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -102,6 +125,13 @@ ActiveRecord::Schema.define(:version => 20100827033632) do
     t.datetime "updated_at"
   end
 
+  create_table "student_grades", :force => true do |t|
+    t.string   "student"
+    t.string   "grade"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "student_quizzes", :force => true do |t|
     t.string   "quizzes_id"
     t.string   "time"
@@ -114,6 +144,14 @@ ActiveRecord::Schema.define(:version => 20100827033632) do
     t.string   "stud_password"
     t.string   "stud_firstname"
     t.string   "stud_lastname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trueorfalses", :force => true do |t|
+    t.text     "question"
+    t.string   "answer"
+    t.string   "rate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

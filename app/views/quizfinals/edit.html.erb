@@ -1,0 +1,51 @@
+<div align="center">
+  <td><%=image_tag "quiz.png", :height => 110, :width => 180 %></td>
+</div>
+<table border=0 style="border: 2px ridge #000099;" bgcolor="#ccccff" align="center">
+  <tr>
+    <td>
+      <table border=0>
+        <tr>
+          <td colspan=11 align="center"><h3><font color="red">CREATE A NEW QUIZ</font></h3></td>
+        </tr>
+        <tr>
+          <td colspan=11>&nbsp;</td>
+        </tr>
+        <% form_for(@quizfinal) do |f| %>
+        <%= f.error_messages %>
+          <tr>
+            <td><%= f.label :quiztype %></td>
+            <td><%= f.text_field :quiztype %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :faculty %></td>
+            <td><%= f.text_field :faculty %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :section  %></td>
+            <td><%= f.text_field :section  %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :timer %></td>
+            <td><%= f.text_field :timer %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :startdate %></td>
+            <td><%= f.text_field :startdate %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :enddate %></td>
+            <td><%= f.text_field :enddate %></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><%= f.submit 'Update' %></td>
+          </tr>
+      <% end %>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td colspan=17><%= link_to image_tag("show.png", :border=>0, :height => 40, :width => 40), @quizfinal %></td></tr>
+        <tr><td colspan=17><%= link_to image_tag("back.png", :border=>0, :height => 40, :width => 40), quizfinals_path %></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>

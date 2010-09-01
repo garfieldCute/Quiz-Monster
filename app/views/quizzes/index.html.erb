@@ -1,30 +1,59 @@
-<h1>Listing quizzes</h1>
-
-<table>
+<div align="center">
+  <td><%=image_tag "quiz.png", :height => 110, :width => 180 %></td>
+</div>
+<table border=0 style="border: 2px ridge #000099;" bgcolor="#ccccff" align="center">
   <tr>
-    <th>Type</th>
-    <th>Faculty</th>
-    <th>Section</th>
-    <th>Timer</th>
-    <th>Startdate</th>
-    <th>Enddate</th>
+    <td>
+      <table border=0>
+        <tr>
+          <td colspan=17 align="center"><h3><font color="red">CREATED QUIZZES</font></h3></td>
+        </tr>
+        <tr>
+          <td colspan=17>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><b>#</b></td>
+          <td>&nbsp;</td>
+          <td><b>TYPE</b></td>
+          <td>&nbsp;</td>
+          <td><b>Section</b></td>
+          <td>&nbsp;</td>
+          <td><b>Timer</b></td>
+          <td>&nbsp;</td>
+          <td><b>Start Date</b></td>
+          <td>&nbsp;</td>
+          <td><b>End Date</b></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <% @quizzes.each do |quiz| %>
+        <tr>
+          <td><%=h quiz.id %></td>
+          <td>&nbsp;</td>
+          <td><%=h quiz.quizType %></td>
+          <td>&nbsp;</td>
+          <td align="center"><%=h quiz.section %></td>
+          <td>&nbsp;</td>
+          <td align="center"><%=h quiz.timer %></td>
+          <td>&nbsp;</td>
+          <td><%=h quiz.startDate %></td>
+          <td>&nbsp;</td>
+          <td><%=h quiz.endDate %></td>
+          <td>&nbsp;</td>
+          <td><%= link_to image_tag("show.png", :border=>0, :height => 20, :width => 20), quiz %></td>
+          <td>&nbsp;</td>
+          <td><%= link_to image_tag("edit.png", :border=>0, :height => 20, :width => 20), edit_quiz_path(quiz) %></td>
+          <td>&nbsp;</td>
+          <td><%= link_to image_tag("delete.png", :border=>0, :height => 20, :width => 20), quiz, :confirm => 'Are you sure?', :method => :delete %></td>
+        </tr>
+        <% end %>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td colspan=17><%= link_to image_tag("new.png", :border=>0, :height => 50, :width => 40), :action => "new" %></td></tr>
+      </table>
+    </td>
   </tr>
-
-<% @quizzes.each do |quiz| %>
-  <tr>
-    <td><%=h quiz.type %></td>
-    <td><%=h quiz.faculty %></td>
-    <td><%=h quiz.section %></td>
-    <td><%=h quiz.timer %></td>
-    <td><%=h quiz.startdate %></td>
-    <td><%=h quiz.enddate %></td>
-    <td><%= link_to 'Show', quiz %></td>
-    <td><%= link_to 'Edit', edit_quiz_path(quiz) %></td>
-    <td><%= link_to 'Destroy', quiz, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
 </table>
-
-<br />
-
-<%= link_to 'New quiz', new_quiz_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  question: MyText
+  true: MyText
+  false: MyText
+  correction: MyText
+  correctAns: 1
+  correctText: MyText
+  rate: MyText
+
+two:
+  question: MyText
+  true: MyText
+  false: MyText
+  correction: MyText
+  correctAns: 1
+  correctText: MyText
+  rate: MyText

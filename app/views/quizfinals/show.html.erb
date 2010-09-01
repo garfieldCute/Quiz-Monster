@@ -1,0 +1,51 @@
+<div align="center">
+  <td><%=image_tag "quiz.png", :height => 110, :width => 180 %></td>
+</div>
+<table border=0 style="border: 2px ridge #000099;" bgcolor="#ccccff" align="center">
+  <tr>
+    <td>
+      <table border=0>
+        <tr>
+          <td colspan=11 align="center"><h3><font color="red">Viewing the Quiz</font></h3></td>
+        </tr>
+        <tr>
+          <td colspan=11>&nbsp;</td>
+        </tr>
+        <% form_for(@quizfinal) do |f| %>
+        <%= f.error_messages %>
+          <tr>
+            <td>Quiz Type:</td>
+            <td><%=h @quizfinal.quiztype %></td>
+          </tr>
+          <tr>
+            <td>Faculty:</td>
+            <td><%=h @quizfinal.faculty %></td>
+          </tr>
+          <tr>
+            <td>Section:</td>
+            <td> <%=h @quizfinal.section %></td>
+          </tr>
+          <tr>
+            <td>Alloted Time:</td>
+            <td><%=h @quizfinal.timer %></td>
+          </tr>
+          <tr>
+            <td>Start Date</td>
+            <td><%=h @quizfinal.startdate %></td>
+          </tr>
+          <tr>
+            <td>End Date</td>
+            <td><%=h @quizfinal.enddate %></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+      <% end %>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td colspan=17><%= link_to image_tag("edit.png", :border=>0, :height => 40, :width => 40), edit_quizfinal_path(@quizfinal) %></td></tr>
+        <tr><td colspan=17><%= link_to image_tag("back.png", :border=>0, :height => 40, :width => 40), quizfinals_path %></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>

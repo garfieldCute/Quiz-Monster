@@ -1,0 +1,24 @@
+<h1>Listing trueorfalses</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+    <th>Rate</th>
+  </tr>
+
+<% @trueorfalses.each do |trueorfalse| %>
+  <tr>
+    <td><%=h trueorfalse.question %></td>
+    <td><%=h trueorfalse.answer %></td>
+    <td><%=h trueorfalse.rate %></td>
+    <td><%= link_to 'Show', trueorfalse %></td>
+    <td><%= link_to 'Edit', edit_trueorfalse_path(trueorfalse) %></td>
+    <td><%= link_to 'Destroy', trueorfalse, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New trueorfalse', new_trueorfalse_path %>

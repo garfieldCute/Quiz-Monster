@@ -1,0 +1,18 @@
+<p>
+  <b>Question:</b>
+  <%=h @trueorfalse.question %>
+</p>
+
+<p>
+  <b>Answer:</b>
+  <%=h @trueorfalse.answer %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%=h @trueorfalse.rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_trueorfalse_path(@trueorfalse) %> |
+<%= link_to 'Back', trueorfalses_path %>

@@ -1,4 +1,28 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :quizfinals
+
+  map.resources :newquizzes
+
+  map.resources :newquizzes
+
+  map.resources :trueorfalses
+
+  map.resources :trueorfalses
+
+  map.resources :trueorfalses
+
+  map.resources :quizzs
+
+  map.resources :essays
+
+  map.resources :mulanswers
+
+  map.resources :identifications
+
+  map.resources :modtrueorfalses
+
+  map.resources :multiplechoices
+
   map.resources :notifications
 
   map.resources :student_answers
@@ -66,4 +90,5 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  map.root :controller => 'home'
 end
