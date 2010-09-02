@@ -1,40 +1,261 @@
-<h1>Editing multiplechoice</h1>
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+<title>Quiz-Monster</title>
+<style type="text/css">
+body {
+background: #f2f2f2;
+font-family: Segoe UI;
+font-size: 12px;
+margin: 0 auto;
+}
 
+div {
+margin: 0;
+padding: 0
+}
+
+a {
+color: #3a3a3a;
+text-decoration: none
+}
+
+a:hover {
+color: #3a3a3a;
+text-decoration: underline
+}
+
+p {
+margin: 0;
+border: 0;
+padding: 0
+}
+
+ul, ul li {
+display: inline; 
+list-style: none;
+margin-right: 30px;
+padding: 0
+}
+
+span {
+font-weight: bolder;
+}
+
+#logo_menu {
+margin: 0 auto;
+}
+
+.logo {
+width: 900px;
+height: auto;
+margin: 0 auto;
+}
+
+.logotyp {
+background-image: url(img_03.png);
+width: 234px;
+height: 46px;
+margin-top: 30px;
+margin-bottom: 25px
+}
+
+.menu {
+background-image: url('images/img_07.png');
+width: auto;
+height: 44px;
+}
+
+.menu_t {
+width: 895px;
+height: 29px;
+margin: 0 auto;
+font-size: 12px;
+font-weight: normal;
+padding-top: 15px;
+padding-left: 5px;
+}
+
+#cialo {
+width: 900px;
+height: auto;
+margin: 0 auto;
+}
+
+#navigation {
+width: 220px;
+height: auto;
+float: left;
+margin: 0 auto;
+margin-top: 30px;
+}
+
+.navigation_top {
+background-image: url('images/img_11.png');
+width: 200px;
+height: 27px;
+float: left;
+color: #f2f2f2;
+padding-top: 12px;
+padding-left: 20px;
+}
+
+#navigation_body {
+width: 205px;
+color: #3a3a3a;
+font-size: 11px;
+margin-top: 10px;
+margin-bottom: 15px;
+padding-left: 15px;
+float: left;
+}
+
+#navigation_body2 {
+width: 205px;
+color: #3a3a3a;
+font-size: 11px;
+margin-top: 10px;
+margin-bottom: 15px;
+padding-left: 15px;
+float: left;
+}
+#news {
+width: 670px;
+height: auto;
+float: left;
+margin: 0 auto;
+margin-top: 30px;
+margin-left: 5px;
+}
+
+.news_top {
+background-image: url('images/img_11.png');
+width: 670px;
+height: 27px;
+color: #f2f2f2;
+padding-top: 12px;
+padding-left: 20px;
+}
+
+.news_body {
+font-size: 11px;
+margin-top: 10px;
+margin-left: 15px;
+margin-right: 5px;
+margin-bottom: 15px;
+}
+
+#fotter {
+background-image: url('images/img_15.png');
+width: auto;
+height: 74px;
+margin-top: 500px;
+}
+
+#fotter_text {
+width: 910px;
+color: #f2f2f2;
+margin: 0 auto;
+}
+
+.fotter_text_left {
+float: left;
+margin-top: 30px;
+}
+
+.fotter_text_right {
+float: right;
+margin-top: 30px;
+}
+
+.style1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana;
+  font-size: 11px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="logo_menu">
+     <div class="logo">
+     </div>
+     <div class="menu">
+          <div class="menu_t">
+               <ul class="menu_text">
+                    <li><span lang="en-ph"><%= link_to "Home"%></span></li>
+                     <li><span lang="en-ph"><%= link_to "Students", students_path%></span></li>
+                      <li><span lang="en-ph"><%= link_to "Quiz", :controller => "quizzeslink", :action => "index"%></span></li>
+                       <li><span lang="en-ph"><%= link_to "Logout"%></span></li>
+               </ul>
+          </div>
+     <div>
+</div>
+
+<div id="cialo">
+     <div id="navigation">
+     
+          <!-- WAG GALAWIN. LOGO BAR -->
+          <img alt="" height="230" src="images/logo.png" width="214" /></div>
+          <div id="news">
+          
+          <!-- BLACK BAR THINGY, WRITE YOUR MAIN CAPTIONS FOR THE PAGE HERE. ;)-->
+          <div class="news_top"><span lang="en-ph">Create Multiple Choice Questions</span></div>
+          <div class="news_body">
+            
+          <!-- HELLO GROUPMATES SO PAGGAGAWA KAYO, DITO NIO INSERT UNG LAMAN. :)  WAG NIO NA LANG BURAHIN UNG SPAN
+            LANG BAKA MABAGO UNG LAYOUT EE.-->
+            
 <% form_for(@multiplechoice) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :question %><br />
-    <%= f.text_area :question %>
+    Question: <br />
+    <%= f.text_area :question, :rows => "2", :cols => "40"%>
   </p>
   <p>
-    <%= f.label :choice1 %><br />
-    <%= f.text_area :choice1 %>
+    Choice # 1<br />
+    <%= f.text_area :choice1, :rows => "2", :cols => "40"%>
   </p>
   <p>
-    <%= f.label :choice2 %><br />
-    <%= f.text_area :choice2 %>
+    Choice # 2<br />
+    <%= f.text_area :choice2, :rows => "2", :cols => "40"%>
   </p>
   <p>
-    <%= f.label :choice3 %><br />
-    <%= f.text_area :choice3 %>
+    Choice # 3<br />
+    <%= f.text_area :choice3, :rows => "2", :cols => "40"%>
   </p>
   <p>
-    <%= f.label :choice4 %><br />
-    <%= f.text_area :choice4 %>
+    Choice # 4<br />
+    <%= f.text_area :choice4, :rows => "2", :cols => "40"%>
   </p>
   <p>
-    <%= f.label :correctChoice %><br />
+    Correct Answer<br />
     <%= f.text_field :correctChoice %>
   </p>
   <p>
-    <%= f.label :rate %><br />
-    <%= f.text_area :rate %>
-  </p>
+    Rate<br />
+    <%= f.text_field :rate %>
+  </p><br>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Update', :class => 'style1' %><br><br>
   </p>
 <% end %>
 
-<%= link_to 'Show', @multiplechoice %> |
-<%= link_to 'Back', multiplechoices_path %>
+<%= link_to image_tag("show.png", :border=>0, :height => 40, :width => 40), @multiplechoice %>    
+<%= link_to image_tag("back.png", :border=>0, :height => 40, :width => 40), multiplechoices_path %>      
+          <!-- END NG BODY. LAHAT NG EEDIT NIO AT PAPALITAN BUKOD XEMPRE SA TAB LINKS AND ALL, HANGGANG DITO LANG. :) -->
+          </div>
+     </div>     
+</div>
+
+<div id="fotter">
+     <div id="fotter_text">
+          <div class="fotter_text_left">Copyright 2010 Quiz-Monster Team</div>
+     </div>
+</div>
+
+</div>
+</div>
+</body>
+</html>

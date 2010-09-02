@@ -44,7 +44,7 @@ class TrueorfalsesController < ApplicationController
 
     respond_to do |format|
       if @trueorfalse.save
-        format.html { redirect_to(@trueorfalse, :notice => 'Trueorfalse was successfully created.') }
+        format.html { redirect_to(@trueorfalse, :notice => 'Your question was successfully created.') }
         format.xml  { render :xml => @trueorfalse, :status => :created, :location => @trueorfalse }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class TrueorfalsesController < ApplicationController
 
     respond_to do |format|
       if @trueorfalse.update_attributes(params[:trueorfalse])
-        format.html { redirect_to(@trueorfalse, :notice => 'Trueorfalse was successfully updated.') }
+        format.html { redirect_to(@trueorfalse, :notice => 'Your question was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

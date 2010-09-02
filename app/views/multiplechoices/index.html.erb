@@ -1,32 +1,246 @@
-<h1>Listing multiplechoices</h1>
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+<title>Quiz-Monster</title>
+<style type="text/css">
+body {
+background: #f2f2f2;
+font-family: Segoe UI;
+font-size: 12px;
+margin: 0 auto;
+}
 
-<table>
+div {
+margin: 0;
+padding: 0
+}
+
+a {
+color: #3a3a3a;
+text-decoration: none
+}
+
+a:hover {
+color: #3a3a3a;
+text-decoration: underline
+}
+
+p {
+margin: 0;
+border: 0;
+padding: 0
+}
+
+ul, ul li {
+display: inline; 
+list-style: none;
+margin-right: 30px;
+padding: 0
+}
+
+span {
+font-weight: bolder;
+}
+
+#logo_menu {
+margin: 0 auto;
+}
+
+.logo {
+width: 900px;
+height: auto;
+margin: 0 auto;
+}
+
+.logotyp {
+background-image: url(img_03.png);
+width: 234px;
+height: 46px;
+margin-top: 30px;
+margin-bottom: 25px
+}
+
+.menu {
+background-image: url('images/img_07.png');
+width: auto;
+height: 44px;
+}
+
+.menu_t {
+width: 895px;
+height: 29px;
+margin: 0 auto;
+font-size: 12px;
+font-weight: normal;
+padding-top: 15px;
+padding-left: 5px;
+}
+
+#cialo {
+width: 900px;
+height: auto;
+margin: 0 auto;
+}
+
+#navigation {
+width: 220px;
+height: auto;
+float: left;
+margin: 0 auto;
+margin-top: 30px;
+}
+
+.navigation_top {
+background-image: url('images/img_11.png');
+width: 200px;
+height: 27px;
+float: left;
+color: #f2f2f2;
+padding-top: 12px;
+padding-left: 20px;
+}
+
+#navigation_body {
+width: 205px;
+color: #3a3a3a;
+font-size: 11px;
+margin-top: 10px;
+margin-bottom: 15px;
+padding-left: 15px;
+float: left;
+}
+
+#navigation_body2 {
+width: 205px;
+color: #3a3a3a;
+font-size: 11px;
+margin-top: 10px;
+margin-bottom: 15px;
+padding-left: 15px;
+float: left;
+}
+#news {
+width: 670px;
+height: auto;
+float: left;
+margin: 0 auto;
+margin-top: 30px;
+margin-left: 5px;
+}
+
+.news_top {
+background-image: url('images/img_11.png');
+width: 670px;
+height: 27px;
+color: #f2f2f2;
+padding-top: 12px;
+padding-left: 20px;
+}
+
+.news_body {
+font-size: 11px;
+margin-top: 10px;
+margin-left: 15px;
+margin-right: 5px;
+margin-bottom: 15px;
+}
+
+#fotter {
+background-image: url('images/img_15.png');
+width: auto;
+height: 74px;
+margin-top: 500px;
+}
+
+#fotter_text {
+width: 910px;
+color: #f2f2f2;
+margin: 0 auto;
+}
+
+.fotter_text_left {
+float: left;
+margin-top: 30px;
+}
+
+.fotter_text_right {
+float: right;
+margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+<div id="logo_menu">
+     <div class="logo">
+     </div>
+     <div class="menu">
+          <div class="menu_t">
+               <ul class="menu_text">
+                    <li><span lang="en-ph"><%= link_to "Home"%></span></li>
+                     <li><span lang="en-ph"><%= link_to "Students", students_path%></span></li>
+                      <li><span lang="en-ph"><%= link_to "Quiz", :controller => "quizzeslink", :action => "index"%></span></li>
+                       <li><span lang="en-ph"><%= link_to "Logout"%></span></li>
+               </ul>
+          </div>
+     <div>
+</div>
+
+<div id="cialo">
+     <div id="navigation">
+     
+          <!-- WAG GALAWIN. LOGO BAR -->
+          <img alt="" height="230" src="images/logo.png" width="214" /></div>
+          <div id="news">
+          
+          <!-- BLACK BAR THINGY, WRITE YOUR MAIN CAPTIONS FOR THE PAGE HERE. ;)-->
+          <div class="news_top"><span lang="en-ph">Create Multiple Choice Questions</span></div>
+          <div class="news_body">
+            
+          <!-- HELLO GROUPMATES SO PAGGAGAWA KAYO, DITO NIO INSERT UNG LAMAN. :)  WAG NIO NA LANG BURAHIN UNG SPAN
+            LANG BAKA MABAGO UNG LAYOUT EE.-->
+          
+         <table cellpadding="0" cellspacing="0" align="center">
   <tr>
-    <th>Question</th>
-    <th>Choice1</th>
-    <th>Choice2</th>
-    <th>Choice3</th>
-    <th>Choice4</th>
-    <th>Correctchoice</th>
-    <th>Rate</th>
+    <th style="width:400px">Question</th>
+    <th style="width:40px">1</th>
+    <th style="width:40px">2</th>
+    <th style="width:40px">3</th>
+    <th style="width:40px">4</th>
+    <th style="width:100px">Correct Answer</th>
+    <th style="width:50px">Rate</th>
   </tr>
 
 <% @multiplechoices.each do |multiplechoice| %>
   <tr>
     <td><%=h multiplechoice.question %></td>
-    <td><%=h multiplechoice.choice1 %></td>
-    <td><%=h multiplechoice.choice2 %></td>
-    <td><%=h multiplechoice.choice3 %></td>
-    <td><%=h multiplechoice.choice4 %></td>
-    <td><%=h multiplechoice.correctChoice %></td>
-    <td><%=h multiplechoice.rate %></td>
-    <td><%= link_to 'Show', multiplechoice %></td>
-    <td><%= link_to 'Edit', edit_multiplechoice_path(multiplechoice) %></td>
-    <td><%= link_to 'Destroy', multiplechoice, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align="center"><%=h multiplechoice.choice1 %></td>
+    <td align="center"><%=h multiplechoice.choice2 %></td>
+    <td align="center"><%=h multiplechoice.choice3 %></td>
+    <td align="center"><%=h multiplechoice.choice4 %></td>
+    <td align="center"><%=h multiplechoice.correctChoice %></td>
+    <td align="center"><%=h multiplechoice.rate %></td>
+    <td align="center" style="width:40px"><%= link_to image_tag("show.png", :border=>0, :height => 30, :width => 30), multiplechoice %></td>
+    <td align="center" style="width:40px"><%= link_to image_tag("edit.png", :border=>0, :height => 30, :width => 30), edit_multiplechoice_path(multiplechoice) %></td>
+    <td align="center" style="width:40px"><%= link_to image_tag("delete.png", :border=>0, :height => 30, :width => 30), multiplechoice, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+  <br />
 
-<br />
+<%= link_to image_tag("new.png", :border => 0, :height => 50, :width => 40), new_multiplechoice_path %>        
+          <!-- END NG BODY. LAHAT NG EEDIT NIO AT PAPALITAN BUKOD XEMPRE SA TAB LINKS AND ALL, HANGGANG DITO LANG. :) -->
+          </div>
+     </div>     
+</div>
 
-<%= link_to 'New multiplechoice', new_multiplechoice_path %>
+<div id="fotter">
+     <div id="fotter_text">
+          <div class="fotter_text_left">Copyright 2010 Quiz-Monster Team</div>
+     </div>
+</div>
+
+</div>
+</div>
+</body>
+</html>

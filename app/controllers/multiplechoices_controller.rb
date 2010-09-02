@@ -44,7 +44,7 @@ class MultiplechoicesController < ApplicationController
 
     respond_to do |format|
       if @multiplechoice.save
-        format.html { redirect_to(@multiplechoice, :notice => 'Multiplechoice was successfully created.') }
+        format.html { redirect_to(@multiplechoice, :notice => 'Your question was successfully created.') }
         format.xml  { render :xml => @multiplechoice, :status => :created, :location => @multiplechoice }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class MultiplechoicesController < ApplicationController
 
     respond_to do |format|
       if @multiplechoice.update_attributes(params[:multiplechoice])
-        format.html { redirect_to(@multiplechoice, :notice => 'Multiplechoice was successfully updated.') }
+        format.html { redirect_to(@multiplechoice, :notice => 'Your question was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
