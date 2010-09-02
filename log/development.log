@@ -18476,3 +18476,10 @@ ActionView::TemplateError (undefined local variable or method `logo' for #<Actio
 Rendered rescues/_trace (94.6ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-09-02 12:43:17) [GET]
+Rendering login/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/]
